@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    font-family: "Noto Sans";
+    background-color: rgb(24, 3, 23);
+    color: white;
+}
+
+body {
+    overflow-x: hidden;
+    user-select: none;
+    /* height:100dvh;
+    width:100dvw; */
+    overflow-y: auto;
+}
+
+.bg-image {
+    background-image: url("assets/noise.webp");
+}
+
+.t-shadow {
+    text-shadow: 0 0 0.2rem #fff,
+    0 0 0.4rem,
+    0 0 0.8rem,
+    0 0 1.6rem,
+    0 0 3.2rem;
+}
+
+.b-shadow {
+    box-shadow: 0 0.2rem 0.4rem #000;
+}
