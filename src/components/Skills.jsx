@@ -41,13 +41,13 @@ const Skills = () => {
     }, [inView]);
 
   return (
-    <section id="skill-section">
+    <section className="sm:mx-4" id="skill-section">
 
       <motion.h2 ref={ref} initial="hidden" animate={controls} transition={{duration: 0.8, ease: "easeOut"}} variants={{hidden: {opacity: 0, y: 100}, visible: {opacity: 1, y: 0}}} className="text-3xl text-center underline decoration-2 underline-offset-8 my-8">SKILLS</motion.h2>
 
-        <div className="grid grid-cols-2 justify-items-center gap-8">
+        <div className="grid grid-cols-2 justify-items-center gap-8 sm:grid-cols-5">
           {
-            SKILLS.map((skill) => <SkillCard cardData={skill} />)
+            SKILLS.map((skill, idx) => <SkillCard key={idx} cardData={skill} />)
           }
         </div>
       

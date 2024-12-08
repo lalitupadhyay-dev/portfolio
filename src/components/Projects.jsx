@@ -17,7 +17,7 @@ const ProjectCard = (props) => {
     }, [inView])
 
     return (
-        <motion.div ref={ref} className="border border-purple-300/50 mx-2 p-4 my-12 rounded-md" initial="hidden" animate={controls} variants={{ hidden: { opacity: 0, y: 100 }, visible: { opacity: 1, y: 0 } }} transition={{ duration: 0.8, ease: "easeOut" }}>
+        <motion.div ref={ref} className="border border-purple-300/50 mx-2 p-4 my-12 rounded-md sm:w-[30vw]" initial="hidden" animate={controls} variants={{ hidden: { opacity: 0, y: 100 }, visible: { opacity: 1, y: 0 } }} transition={{ duration: 0.8, ease: "easeOut" }}>
             <a href={props.cardData.link} target="_blank">
                 <img className="rounded-md" src={props.cardData.imgSrc} />
             </a>
@@ -30,7 +30,7 @@ const ProjectCard = (props) => {
                     <strong>Technologies used:</strong>
                     <ul className="flex items-center justify-start gap-4 mt-2">
                         {
-                            props.cardData.techStack.map((tech) => <li className="text-xs border border-pink-500/30 p-2 rounded-full b-shadow">{tech}</li>)
+                            props.cardData.techStack.map((tech, idx) => <li key={idx} className="text-xs border border-pink-500/30 p-2 rounded-full b-shadow">{tech}</li>)
                         }
                     </ul>
                 </div>
@@ -55,10 +55,10 @@ const Projects = () => {
 
     return (
         <section id="project-section">
-            <motion.h2 ref={ref} initial="hidden" animate={controls} transition={{duration: 0.8, ease: "easeOut"}} variants={{hidden: {opacity: 0, y: 100}, visible: {opacity: 1, y: 0}}} className="text-3xl text-center underline decoration-2 underline-offset-8 mb-8">PROJECTS</motion.h2>
-            <div>
+            <motion.h2 ref={ref} initial="hidden" animate={controls} transition={{duration: 0.8, ease: "easeOut"}} variants={{hidden: {opacity: 0, y: 100}, visible: {opacity: 1, y: 0}}} className="text-3xl text-center underline decoration-2 underline-offset-8 mb-8 sm:mb-0">PROJECTS</motion.h2>
+            <div className="sm:grid sm:grid-cols-3 sm:justify-items-center">
                 {
-                    PROJECTS.map((eachProject) => <ProjectCard cardData={eachProject} />)
+                    PROJECTS.map((eachProject, idx) => <ProjectCard key={idx} cardData={eachProject} />)
                 }
             </div>
         </section>

@@ -1,5 +1,6 @@
 {
   "name": "portfolio",
+  "homepage": "https://github.com/lalitupadhyay-dev/portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,16 +8,20 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@remixicon/react": "^4.5.0",
-    "gsap": "^3.12.5",
+    "gh-pages": "^6.2.0",
     "motion": "^11.11.17",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
-    "react-intersection-observer": "^9.13.1"
+    "react-intersection-observer": "^9.13.1",
+    "sweetalert2": "^11.14.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
@@ -28,7 +33,6 @@
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
-    "gh-pages": "^6.2.0",
     "globals": "^15.12.0",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15",

@@ -27,7 +27,7 @@ const ExperienceCard = (props) => {
                 <strong className="text-sm">Description:</strong>
                 <ul className="list-disc ml-3">
                     {
-                        props.cardData.description.map((eachPoint) => <li className="text-xs text-justify my-2">{eachPoint}</li>)
+                        props.cardData.description.map((eachPoint, idx) => <li key={idx} className="text-xs text-justify my-2">{eachPoint}</li>)
                     }
                 </ul>
             </div>
@@ -35,7 +35,7 @@ const ExperienceCard = (props) => {
                 <strong className="text-sm">Tech Stack:</strong>
                 <ul className="flex gap-x-4 flex-wrap">
                     {
-                        props.cardData.techStack.map((eachPoint) => <li className="text-xs text-justify my-2 p-2 border border-pink-500/30 rounded-full b-shadow">{eachPoint}</li>)
+                        props.cardData.techStack.map((eachPoint, idx) => <li key={idx} className="text-xs text-justify my-2 p-2 border border-pink-500/30 rounded-full b-shadow">{eachPoint}</li>)
                     }
                 </ul>
             </div>
@@ -59,10 +59,10 @@ const Experience = () => {
     }, [inView]);
 
     return (
-        <section id="experience-section">
+        <section className="sm:mx-4" id="experience-section">
             <motion.h2 ref={ref} initial="hidden" animate={controls} transition={{duration: 0.8, ease: "easeOut"}} variants={{hidden: {opacity: 0, y: 100}, visible: {opacity: 1, y: 0}}} className="text-3xl text-center underline decoration-2 underline-offset-8 my-8">WORK EXPERIENCE</motion.h2>
 
-            <div>
+            <div className="sm:grid sm:grid-cols-2 sm:justify-items-center">
                 {
                     EXPERIENCES.map((eachExperience) => <ExperienceCard key={eachExperience.id} cardData={eachExperience} />)
                 }

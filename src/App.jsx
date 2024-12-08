@@ -4,6 +4,7 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Education from "./components/Education.jsx";
+import ContactMe from "./components/ContactMe.jsx";
 
 function App() {
 
@@ -22,6 +23,9 @@ function App() {
         <Experience />
 
         <Education />
+
+        <ContactMe />
+
     </main>
   )
 }

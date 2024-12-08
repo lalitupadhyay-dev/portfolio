@@ -1,43 +1,30 @@
 import project1 from "../assets/project1.webp";
 import project2 from "../assets/project2.webp";
 import project3 from "../assets/project3.webp";
-import project4 from "../assets/project4.webp";
-import project5 from "../assets/project5.webp";
-import project6 from "../assets/project6.webp";
-import personImage from "../assets/testimonial.webp";
 
-import {
-  RiHtml5Line,
-  RiCss3Line,
-  RiJavascriptLine,
-  RiReactjsLine,
-  RiNodeTree,
-} from "@remixicon/react";
-import {
-  RiDatabaseLine,
-  RiCodeSSlashLine,
-  RiGitBranchLine,
-} from "@remixicon/react";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { GrMysql, GrReactjs } from "react-icons/gr";
 import { FaNodeJs } from "react-icons/fa6";
 import { TbBrandJavascript } from "react-icons/tb";
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
+import { SiMongodb } from "react-icons/si";
+import { SiExpress } from "react-icons/si";
+import { SiPostman } from "react-icons/si";
 
 export const NAVIGATION_LINKS = [
   { label: "PROJECTS", href: "#project-section" },
   { label: "SKILLS", href: "#skill-section" },
   { label: "WORK EXPERIENCE", href: "#experience-section" },
   { label: "EDUCATION", href: "#education-section" },
-  { label: "Contact", href: "#contact" },
+  { label: "CONTACT ME", href: "#contact-section" },
 ];
 
 export const PROFILE = {
   name: "Lalit Upadhyay",
   role: "Front End Developer",
   subheading:
-    "With 3 years experience of front-end development, I build efficient and reusable components that catch the eyes of end-users, with amazing user-experience. Always curious about interesting projects.",
+    "With 3 years of experience in front end development, I build efficient and reusable components that catch the eyes of end-users, with great user-experience. Always curious about interesting projects.",
 };
 
 export const PROJECTS = [
@@ -59,6 +46,15 @@ export const PROJECTS = [
     imgSrc: project2,
     link: "https://www.rbcsales.in",
   },
+  {
+    id: 2,
+    title: "Question Paper Generator",
+    description:
+      "A dynamic Question Paper Generator enabling users to create and customize question papers efficiently. This tool streamlined the process by integrating user-friendly interfaces.",
+    techStack: ["HTML", "CSS", "JavaScript"],
+    imgSrc: project3,
+    link: "https://qpg.compilewithakash.com/",
+  },
 ];
 
 export const SKILLS = [
@@ -69,6 +65,10 @@ export const SKILLS = [
   {
     name: "CSS3",
     icon: <FaCss3Alt className="text-blue-400 text-4xl mb-4" />
+  },
+  {
+    name: "Tailwind CSS",
+    icon: <RiTailwindCssFill className="text-blue-500 text-4xl mb-4" />
   },
   {
     name: "JavaScript",
@@ -83,12 +83,20 @@ export const SKILLS = [
     icon: <FaNodeJs className="text-green-500 text-4xl mb-4" />
   },
   {
-    name: "mySQL",
-    icon: <GrMysql className="bg-blue-500 text-4xl mb-4" />
+    name: "Express.js",
+    icon: <SiExpress className="bg-white text-black rounded-full text-4xl p-1 mb-4" />
   },
   {
-    name: "Tailwind CSS",
-    icon: <RiTailwindCssFill className="text-blue-500 text-4xl mb-4" />
+    name: "Postman",
+    icon: <SiPostman className="bg-white text-orange-400 rounded-full text-4xl mb-4" />,
+  },
+  {
+    name: "MongoDB",
+    icon: <SiMongodb className="text-green-500 text-4xl mb-4" />
+  },
+  {
+    name: "mySQL",
+    icon: <GrMysql className="bg-blue-500 text-4xl mb-4" />
   },
 ];
 
