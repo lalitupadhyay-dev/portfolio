@@ -44,7 +44,7 @@ export const PROJECTS = [
     description: "It is build on top of React.js, user authentication is done using Firebase, and the data is coming from the APIs of TMDB (The Movie DataBase). I have also integrated gpt-3 API inside it for recommendation of movies.",
     techStack: ["React.js", "Tailwind CSS", "Redux", "Firebase"],
     imgSrc: project2,
-    link: "",
+    link: "https://bd-cinema.web.app/",
   },
   {
     id: 3,
