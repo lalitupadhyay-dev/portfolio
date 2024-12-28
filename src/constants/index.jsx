@@ -1,6 +1,7 @@
 import project1 from "../assets/project1.webp";
 import project2 from "../assets/project2.webp";
 import project3 from "../assets/project3.webp";
+import project4 from "../assets/project4.webp";
 
 import { RiTailwindCssFill } from "react-icons/ri";
 import { GrMysql, GrReactjs } from "react-icons/gr";
@@ -39,20 +40,28 @@ export const PROJECTS = [
   },
   {
     id: 2,
+    title: "BD Cinema",
+    description: "It is build on top of React.js, user authentication is done using Firebase, and the data is coming from the APIs of TMDB (The Movie DataBase). I have also integrated gpt-3 API inside it for recommendation of movies.",
+    techStack: ["React.js", "Tailwind CSS", "Redux", "Firebase"],
+    imgSrc: project2,
+    link: "",
+  },
+  {
+    id: 3,
     title: "Order Tracking System",
     description:
       "A fully-functional, responsive, Role-based Access Order Tracking System that helps the organisation to automate the orders and reduce all the paper work. Collaborated in the UI/UX part of this project and build effective and reusable components.",
     techStack: ["HTML", "CSS", "JavaScript"],
-    imgSrc: project2,
+    imgSrc: project3,
     link: "https://www.rbcsales.in",
   },
   {
-    id: 2,
+    id: 4,
     title: "Question Paper Generator",
     description:
       "A dynamic Question Paper Generator enabling users to create and customize question papers efficiently. This tool streamlined the process by integrating user-friendly interfaces.",
     techStack: ["HTML", "CSS", "JavaScript"],
-    imgSrc: project3,
+    imgSrc: project4,
     link: "https://qpg.compilewithakash.com/",
   },
 ];
